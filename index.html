@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Story of Mesmyne Fotso — 1990s French Editorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 1990s FRENCH EDITORIAL & HIGH-FASHION PRINT STYLING */
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,800;1,6..96,400;1,6..96,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Oswald:wght@500;700&display=swap');
+
+        :root {
+            --bg-paper: #ece4d5;
+            --text-black: #1a1512;
+            --text-sepia: #4a3e35;
+            --line-color: #baa892;
+            --font-head: 'Oswald', sans-serif;
+            --font-title: 'Bodoni Moda', 'Didot', serif;
+            --font-body: 'EB Garamond', Georgia, serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #12100e;
+            color: var(--text-black);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            padding: 20px 12px;
+            display: flex;
+            justify-content: center;
+            background-image: radial-gradient(circle at 50% 30%, #2c251e 0%, #0d0b09 100%);
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        .page-wrapper {
+            background-color: var(--bg-paper);
+            max-width: 920px;
+            width: 100%;
+            border: 1px solid #d4c5b0;
+            padding: 40px 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6), inset 0 0 100px rgba(180, 140, 90, 0.15);
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .page-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 245, 220, 0.4) 0%, rgba(0, 0, 0, 0.08) 80%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .content-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* TOP NAV / TRANSLATOR */
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--line-color);
+            padding-bottom: 10px;
+        }
+
+        .translator-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-head);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            flex-wrap: wrap;
+        }
+
+        .translator-bar select {
+            background: transparent;
+            border: 1px solid var(--text-black);
+            padding: 2px 6px;
+            font-family: var(--font-head);
+            font-size: 0.75rem;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* HERO */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .giant-title {
+            font-family: var(--font-head);
+            font-size: clamp(3.8rem, 12vw, 6.8rem);
+            font-weight: 700;
+            line-height: 0.8;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            color: var(--text-black);
+            margin: 0;
+        }
+
+        .giant-title span.small-s {
+            display: inline-block;
+            transform: translateX(-4px);
+        }
+
+        .title-of-script {
+            font-family: var(--font-title);
+            font-style: italic;
+            font-weight: 400;
+            font-size: clamp(2.8rem, 8vw, 4rem);
+            text-transform: lowercase;
+            line-height: 0.8;
+            margin-bottom: 8px;
+            color: var(--text-black);
+        }
+
+        .hero-lead-text {
+            font-family: var(--font-body);
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+            color: var(--text-sepia);
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .dates-name-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            border-top: 2px solid var(--text-black);
+            border-bottom: 1px solid var(--text-black);
+            padding: 10px 0;
+            margin: 20px 0 30px 0;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .hero-dates {
+            font-family: var(--font-head);
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .hero-dates span.meet {
+            font-family: var(--font-title);
+            font-style: italic;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            margin-left: 6px;
+            font-weight: 400;
+            text-transform: lowercase;
+        }
+
+        .hero-name {
+            font-family: var(--font-title);
+            font-style: italic;
+            font-size: clamp(2.4rem, 6vw, 3.6rem);
+            font-weight: 600;
+            line-height: 0.9;
+            letter-spacing: -1px;
+        }
+
+        /* PORTRAIT + BIO */
+        .portrait-editorial-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .photo-frame-editorial {
+            float: left;
+            width: 280px;
+            margin-right: 28px;
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .photo-container {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1.3;
+            background: #d0c2b0;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--text-black);
+            box-shadow: 8px 8px 0px rgba(26, 21, 18, 0.15);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(35%) contrast(125%) brightness(92%) hue-rotate(-10deg);
+            transition: filter 0.4s ease;
+            display: block;
+        }
+
+        .photo-container img:hover {
+            filter: sepia(15%) contrast(115%) brightness(98%);
+        }
+
+        .biography-text {
+            font-family: var(--font-body);
+            font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+            line-height: 1.7;
+            color: var(--text-black);
+            text-align: justify;
+        }
+
+        .biography-text p {
+            margin-bottom: 14px;
+            text-indent: 20px;
+        }
+
+        .biography-text p:first-of-type {
+            text-indent: 0;
+        }
+
+        .biography-text p:first-of-type::first-letter {
+            font-family: var(--font-title);
+            font-size: 3.6rem;
+            float: left;
+            line-height: 0.8;
+            padding-top: 4px;
+            padding-right: 10px;
+            padding-bottom: 0;
+            font-weight: 700;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* SECTION HEADERS */
+        .section-heading {
+            font-family: var(--font-head);
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--text-black);
+            padding-bottom: 4px;
+            margin-top: 24px;
+            margin-bottom: 14px;
+        }
+
+        /* THREE COLUMN */
+        .three-col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.2fr;
+            gap: 28px;
+            margin-top: 10px;
+            border-top: 2px solid var(--text-black);
+            padding-top: 20px;
+        }
+
+        .family-card {
+            margin-bottom: 14px;
+        }
+
+        .family-card .label {
+            display: block;
+            font-family: var(--font-head);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-sepia);
+            margin-bottom: 2px;
+        }
+
+        .family-card .value {
+            font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+            font-family: var(--font-body);
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .legacy-ol {
+            padding-left: 18px;
+        }
+
+        .legacy-ol li {
+            font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .legacy-ol strong {
+            font-family: var(--font-title);
+            font-style: italic;
+            display: block;
+            font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+            font-weight: 600;
+        }
+
+        .legacy-ol span {
+            font-size: clamp(0.8rem, 1.2vw, 0.88rem);
+            color: var(--text-sepia);
+        }
+
+        .programme-item {
+            margin-bottom: 14px;
+            font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+        }
+
+        .programme-item .date {
+            font-family: var(--font-head);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+            letter-spacing: 1px;
+            border-bottom: 1px dashed var(--line-color);
+            padding-bottom: 2px;
+            margin-bottom: 4px;
+        }
+
+        .programme-event-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 3px;
+        }
+
+        .programme-event-row .time {
+            font-family: var(--font-head);
+            font-weight: 700;
+            min-width: 45px;
+        }
+
+        .programme-event-row .desc {
+            color: var(--text-sepia);
+        }
+
+        /* FOOTER */
+        .editorial-footer {
+            margin-top: 40px;
+            border-top: 2px solid var(--text-black);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: clamp(0.75rem, 1.4vw, 0.85rem);
+            color: var(--text-sepia);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-left {
+            max-width: 350px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .footer-right {
+            text-align: right;
+            font-family: var(--font-head);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: clamp(0.65rem, 1.2vw, 0.75rem);
+            color: var(--text-black);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 820px) {
+            .page-wrapper {
+                padding: 30px 20px;
+            }
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .hero-name {
+                font-size: clamp(2.2rem, 6vw, 3rem);
+            }
+            .photo-frame-editorial {
+                float: none;
+                width: 100%;
+                max-width: 360px;
+                margin: 0 auto 20px;
+                display: block;
+            }
+            .photo-container {
+                aspect-ratio: 1 / 1.2;
+            }
+            .three-col-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .editorial-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .footer-right {
+                text-align: left;
+            }
+            .biography-text p:first-of-type::first-letter {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px 6px;
+            }
+            .page-wrapper {
+                padding: 20px 14px;
+            }
+            .top-bar {
+                margin-bottom: 16px;
+                padding-bottom: 6px;
+            }
+            .dates-name-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                padding: 8px 0;
+                margin: 12px 0 20px;
+            }
+            .hero-dates span.meet {
+                margin-left: 0;
+            }
+            .photo-frame-editorial {
+                max-width: 280px;
+            }
+            .biography-text p {
+                text-indent: 12px;
+                margin-bottom: 10px;
+            }
+            .biography-text p:first-of-type::first-letter {
+                font-size: 2.6rem;
+                padding-right: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="content-container">
+            <!-- LANGUAGE SELECTOR -->
+            <div class="top-bar">
+                <div class="translator-bar">
+                    <i class="fas fa-globe"></i>
+                    <label for="langSelect" id="lblLang">Édition</label>
+                    <select id="langSelect">
+                        <option value="fr" selected>FR</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- HERO -->
+            <div class="hero-grid">
+                <div class="title-block">
+                    <h1 class="giant-title">THE<br><span class="small-s">S</span>TORY</h1>
+                </div>
+                <div>
+                    <div class="title-of-script">of</div>
+                    <p class="hero-lead-text" id="heroSideText">
+                        Une vie faite de passion, de création et d'un amour inconditionnel. Fondatrice, mère adorée et étoile éternelle pour tous ceux qui l'ont connue.
+                    </p>
+                </div>
+            </div>
+
+            <!-- DATES + NAME -->
+            <div class="dates-name-row">
+                <div class="hero-dates" id="heroDates">1972 - 2026 <span class="meet">remembering</span></div>
+                <div class="hero-name" id="heroName">Mesmyne Fotso</div>
+            </div>
+
+            <!-- PORTRAIT + BIO -->
+            <div class="portrait-editorial-wrapper clearfix">
+                <div class="photo-frame-editorial">
+                    <div class="photo-container">
+                        <img id="profileImage" src="p2.jpg" alt="Mesmyne Fotso" style="background: #d0c2b0;">
+                    </div>
+                </div>
+                <div class="biography-text" id="bioContent">
+                    <p id="bio1"><strong>Mesmyne</strong>, connue de tous, aura été notre trésor.</p>
+                    <p id="bio2">Sa venue au monde, comme un poisson d'avril, le 1<sup>er</sup> avril 1972 à Douala, pourrait à elle seule la résumer, tant elle était singulière et unique.</p>
+                    <p id="bio3">Première enfant de ses parents, Mesmyne était l'aînée tant aimée et admirée d'Annie, Guillaine et Japhet Junior. Bien des années plus tard, elle devint la maman adorée de Bryan et Bryner, ses plus beaux accomplissements.</p>
+                    <p id="bio4">Parler de Mesmyne revient à la situer dans les différents endroits du monde où sa vie et son cœur l'auront conduite : <strong>Paris, Rennes, New York, Londres</strong>… Néanmoins, <strong>Douala</strong> sera restée, indubitablement, sa maison de cœur.</p>
+                    <p id="bio5">Passionnée de décoration d'intérieur, Mesmyne a su transformer sa créativité et son goût pour le beau en une vocation et un véritable art de vivre. Femme entreprenante et travailleuse, elle fut notamment la fondatrice d'enseignes reconnues telles que <strong>Dorchester</strong> et <strong>La Conciergerie</strong>.</p>
+                    <p id="bio6">Au-delà de son parcours professionnel, Mesmyne restera surtout dans les cœurs pour sa joie de vivre et sa générosité. Aujourd'hui, l'unique Métisse Bandjounaise est de retour à la maison et va vers son Père, qu'elle a tant prié.</p>
+                </div>
+            </div>
+
+            <!-- THREE COLUMN EDITORIAL -->
+            <div class="three-col-grid">
+                <!-- FAMILY -->
+                <div>
+                    <h2 class="section-heading" id="headFamily">Famille</h2>
+                    <div class="family-card">
+                        <span class="label" id="lblParents">Parents</span>
+                        <span class="value" id="valParents">Japhet Fotso Takoné & Hélène Pauda</span>
+                    </div>
+                    <div class="family-card">
+                        <span class="label" id="lblChildren">Enfants</span>
+                        <span class="value" id="valChildren">Tchatchoua Ennis Bryan & Tchatchoua Fotso Errold Bryner</span>
+                    </div>
+                    <div class="family-card">
+                        <span class="label" id="lblSiblings">Frères & Sœurs</span>
+                        <span class="value" id="valSiblings">Fotso Annie Sorelle, Fotso Guillaine & Fotso Kamga Japhet Junior</span>
+                    </div>
+                </div>
+
+                <!-- LEGACY -->
+                <div>
+                    <h2 class="section-heading" id="headLegacy">Son Héritage</h2>
+                    <ol class="legacy-ol" id="legacyGrid">
+                        <li><strong id="leg1T">Joie de Vivre</strong><span id="leg1D">Une femme rayonnante et contagieuse.</span></li>
+                        <li><strong id="leg2T">Générosité</strong><span id="leg2D">Elle donnait sans compter, de son temps et de son cœur.</span></li>
+                        <li><strong id="leg3T">Courage & Travail</strong><span id="leg3D">Fondatrice visionnaire de Dorchester et La Conciergerie.</span></li>
+                        <li><strong id="leg4T">Sybarite</strong><span id="leg4D">Amoureuse de l'art, du beau et des douceurs de la vie.</span></li>
+                    </ol>
+                </div>
+
+                <!-- PROGRAMME -->
+                <div>
+                    <h2 class="section-heading" id="headProgramme">Programme</h2>
+                    <div id="programmeContainer">
+                        <div class="programme-item">
+                            <div class="date" id="pDay1">Jeu 3 Septembre 2026</div>
+                            <div class="programme-event-row"><span class="time">15:30</span><span class="desc" id="pD1_1">Levée de corps (Morgue Garnison)</span></div>
+                            <div class="programme-event-row"><span class="time">19:30</span><span class="desc" id="pD1_2">Culte EEC Njo-Njo & Veillée</span></div>
+                        </div>
+                        <div class="programme-item">
+                            <div class="date" id="pDay2">Ven 4 Septembre 2026</div>
+                            <div class="programme-event-row"><span class="time">03:00</span><span class="desc" id="pD2_1">Départ pour Bamendjou</span></div>
+                            <div class="programme-event-row"><span class="time">19:00</span><span class="desc" id="pD2_2">Cérémonie œcuménique</span></div>
+                        </div>
+                        <div class="programme-item">
+                            <div class="date" id="pDay3">Sam 5 Septembre 2026</div>
+                            <div class="programme-event-row"><span class="time">10:00</span><span class="desc" id="pD3_2">Cérémonie & Témoignages</span></div>
+                            <div class="programme-event-row"><span class="time">12:00</span><span class="desc" id="pD3_3">Inhumation & Collation</span></div>
+                        </div>
+                        <div class="programme-item">
+                            <div class="date" id="pDay4">Dim 6 Septembre 2026</div>
+                            <div class="programme-event-row"><span class="time">09:00</span><span class="desc" id="pD4_1">Tour du deuil à Bandjoun</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="editorial-footer">
+                <div class="footer-left">
+                    <div id="footerQuote">« Elle aura surtout, envers et contre tout, AIMÉ. »</div>
+                    <div id="footerSleep">Doux sommeil, Mesmyne.</div>
+                </div>
+                <div class="footer-right">
+                    <div id="footerMotto">Édition Spéciale / Mesmyne Fotso</div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const i18n = {
+            fr: {
+                lblLang: "Édition",
+                heroSideText: "Une vie faite de passion, de création et d'un amour inconditionnel. Fondatrice, mère adorée et étoile éternelle pour tous ceux qui l'ont connue.",
+                bio1: "<strong>Mesmyne</strong>, connue de tous, aura été notre trésor.",
+                bio2: "Sa venue au monde, comme un poisson d'avril, le 1<sup>er</sup> avril 1972 à Douala, pourrait à elle seule la résumer, tant elle était singulière et unique.",
+                bio3: "Première enfant de ses parents, Mesmyne était l'aînée tant aimée et admirée d'Annie, Guillaine et Japhet Junior. Bien des années plus tard, elle devint la maman adorée de Bryan et Bryner, ses plus beaux accomplissements.",
+                bio4: "Parler de Mesmyne revient à la situer dans les différents endroits du monde où sa vie et son cœur l'auront conduite : <strong>Paris, Rennes, New York, Londres</strong>… Néanmoins, <strong>Douala</strong> sera restée, indubitablement, sa maison de cœur.",
+                bio5: "Passionnée de décoration d'intérieur, Mesmyne a su transformer sa créativité et son goût pour le beau en une vocation et un véritable art de vivre. Femme entreprenante et travailleuse, elle fut notamment la fondatrice d'enseignes reconnues telles que <strong>Dorchester</strong> et <strong>La Conciergerie</strong>.",
+                bio6: "Au-delà de son parcours professionnel, Mesmyne restera surtout dans les cœurs pour sa joie de vivre et sa générosité. Aujourd'hui, l'unique Métisse Bandjounaise est de retour à la maison et va vers son Père, qu'elle a tant prié.",
+                headFamily: "Famille",
+                lblParents: "Parents",
+                lblChildren: "Enfants",
+                lblSiblings: "Frères & Sœurs",
+                headLegacy: "Son Héritage",
+                leg1T: "Joie de Vivre",
+                leg1D: "Une femme rayonnante et contagieuse.",
+                leg2T: "Générosité",
+                leg2D: "Elle donnait sans compter, de son temps et de son cœur.",
+                leg3T: "Courage & Travail",
+                leg3D: "Fondatrice visionnaire de Dorchester et La Conciergerie.",
+                leg4T: "Sybarite",
+                leg4D: "Amoureuse de l'art, du beau et des douceurs de la vie.",
+                headProgramme: "Programme",
+                pDay1: "Jeu 3 Septembre 2026",
+                pD1_1: "Levée de corps (Morgue Garnison)",
+                pD1_2: "Culte EEC Njo-Njo & Veillée",
+                pDay2: "Ven 4 Septembre 2026",
+                pD2_1: "Départ pour Bamendjou",
+                pD2_2: "Cérémonie œcuménique",
+                pDay3: "Sam 5 Septembre 2026",
+                pD3_2: "Cérémonie & Témoignages",
+                pD3_3: "Inhumation & Collation",
+                pDay4: "Dim 6 Septembre 2026",
+                pD4_1: "Tour du deuil à Bandjoun",
+                footerQuote: "« Elle aura surtout, envers et contre tout, AIMÉ. »",
+                footerSleep: "Doux sommeil, Mesmyne.",
+                footerMotto: "Édition Spéciale / Mesmyne Fotso"
+            },
+            en: {
+                lblLang: "Edition",
+                heroSideText: "A life built on passion, creativity, and unconditional love. Founder, cherished mother, and eternal star for all who knew her.",
+                bio1: "<strong>Mesmyne</strong>, known to all, was our treasure.",
+                bio2: "Her arrival into the world, like an April Fool's gift on April 1, 1972, in Douala, captures her singular and unique spirit.",
+                bio3: "Firstborn child, Mesmyne was the beloved eldest sister to Annie, Guillaine, and Japhet Junior. Years later, she became the devoted mother of Bryan and Bryner, her proudest achievements.",
+                bio4: "To know Mesmyne is to remember her across the cities where her journey took her: <strong>Paris, Rennes, New York, London</strong>... Yet, <strong>Douala</strong> remained her true home of the heart.",
+                bio5: "Passionate about interior design, Mesmyne turned her eye for beauty into a lifestyle and career. A visionary entrepreneur, she founded renowned brands such as <strong>Dorchester</strong> and <strong>La Conciergerie</strong>.",
+                bio6: "Beyond her professional achievements, Mesmyne will be remembered for her vibrant joy and generosity. Today, the unique Métisse Bandjounaise returns home to her Heavenly Father.",
+                headFamily: "Family",
+                lblParents: "Parents",
+                lblChildren: "Children",
+                lblSiblings: "Siblings",
+                headLegacy: "Her Legacy",
+                leg1T: "Joy of Living",
+                leg1D: "A radiant and uplifting soul.",
+                leg2T: "Generosity",
+                leg2D: "She gave unconditionally with her heart and time.",
+                leg3T: "Courage & Industry",
+                leg3D: "Visionary founder of Dorchester & La Conciergerie.",
+                leg4T: "Sybarite",
+                leg4D: "A lover of art, beauty, and life's finest moments.",
+                headProgramme: "Service Programme",
+                pDay1: "Thu Sep 3, 2026",
+                pD1_1: "Removal of the body (Garrison Mortuary)",
+                pD1_2: "Service at EEC Njo-Njo & Vigil",
+                pDay2: "Fri Sep 4, 2026",
+                pD2_1: "Departure to Bamendjou village",
+                pD2_2: "Ecumenical Vigil Service",
+                pDay3: "Sat Sep 5, 2026",
+                pD3_2: "Religious Service & Tributes",
+                pD3_3: "Burial & Reception",
+                pDay4: "Sun Sep 6, 2026",
+                pD4_1: "Traditional Memorial in Bandjoun",
+                footerQuote: "“Above all else, through everything, she LOVED.”",
+                footerSleep: "Rest in peace, Mesmyne.",
+                footerMotto: "Special Edition / Mesmyne Fotso"
+            }
+        };
+
+        document.getElementById('langSelect').addEventListener('change', function(e) {
+            const lang = e.target.value;
+            const dict = i18n[lang];
+            for (let key in dict) {
+                const el = document.getElementById(key);
+                if (el) el.innerHTML = dict[key];
+            }
+        });
+    </script>
+</body>
+</html>
